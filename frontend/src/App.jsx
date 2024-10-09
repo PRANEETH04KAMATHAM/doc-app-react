@@ -13,7 +13,7 @@ import Contact from './components/contact/Contact';
 import Doctors from './components/Doctors/Doctors';
 import DoctorDetails from "./components/Doctors/DoctorDetails";
 import Feedback from './components/Doctors/Feedback';
-
+//import DoctorDashboard from './components/dashboard/doctorDashboard';
 
 
 function App() {
