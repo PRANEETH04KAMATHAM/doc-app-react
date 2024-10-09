@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 import home2 from '../../assets/images/home2.jpg';
 import find_doc_water from '../../assets/images/find_doc_water.png';
 import doc from '../../assets/images/doc.png';
-import appoint from '../../assets/images/appoint.png'
+import appoint from '../../assets/images/appoint.png';
 import './Home.css';
 import { BsArrowRight } from 'react-icons/bs';
 import About from '../about/About';
@@ -12,8 +11,10 @@ import ServicesList from '../services/ServicesList';
 import DoctorList from '../theDoctors/DoctorList';
 
 const Home = () => {
-  const [gradient, setGradient] = useState('');
+  const [gradient, setGradient] = useState(''); 
+  const navigate = useNavigate(); // Add navigate hook for routing
 
+  // Function to generate gradient effect
   useEffect(() => {
     const generateLowFadeGradient = () => {
       const colors = [
@@ -36,6 +37,11 @@ const Home = () => {
     setGradient(generateLowFadeGradient());
   }, []);
 
+  // Function to handle 'Get Appointment' button click
+  const handleAppointmentClick = () => {
+    navigate('/doctors'); // Navigate to doctors page on click
+  };
+
   return (
     <>
       <section className="home-section" style={{ background: gradient }}>
@@ -48,7 +54,7 @@ const Home = () => {
               <p className="paragraph">
                 Book your medical appointments online quickly and easily, from the comfort of your home.
               </p>
-              <button className="btn">Get Appointment</button>
+              <button className="btn" onClick={handleAppointmentClick}>Get Appointment</button>
             </div>
             <div className="stats">
               <div className="stat-item">
@@ -74,16 +80,17 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Medical Services Section */}
       <section>
-  <div className="container ">
-    <div className="text-center My_Services">
-      <h2 className="heading">Providing the best medical services</h2>
-      <p className="paragraph ">
-        World-class care for everyone. Our health system offers unmatched expert healthcare from the lab to the clinic.
-      </p>
-    </div>
-    <div className="grid MyServiceCards">
-    <div className="service-item">
+        <div className="container">
+          <div className="text-center My_Services">
+            <h2 className="heading">Providing the best medical services</h2>
+            <p className="paragraph">
+              World-class care for everyone. Our health system offers unmatched expert healthcare from the lab to the clinic.
+            </p>
+          </div>
+          <div className="grid MyServiceCards">
+            <div className="service-item">
               <div className="icon-container">
                 <img src={find_doc_water} alt="Doctor icon" />
               </div>
@@ -98,7 +105,7 @@ const Home = () => {
               </Link>
             </div>
 
-           <div className="service-item">
+            <div className="service-item">
               <div className="icon-container">
                 <img src={doc} alt="Doctor icon" />
               </div>
@@ -127,23 +134,27 @@ const Home = () => {
                 </div>
               </Link>
             </div>
-    </div>
-  </div>
-</section>
-
-      <About/>
-
-      <section className='MyCon'>
-        <div className="container ">
-          <div className='xl:w-[470px] mx-auto My_Services'>
-            <h2 className='text-center heading '>OUR MEDICAL SERVICES</h2>
-            <p className='text-center text_para p_MY'> World-class care for everyone. Our health system offers unmatched expert healthcare from the lab to the clinic.</p>
           </div>
-
-         <ServicesList/>
         </div>
       </section>
 
+      {/* About Section */}
+      <About />
+
+      {/* Medical Services List */}
+      <section className="MyCon">
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto My_Services">
+            <h2 className="text-center heading">OUR MEDICAL SERVICES</h2>
+            <p className="text-center text_para p_MY">
+              World-class care for everyone. Our health system offers unmatched expert healthcare from the lab to the clinic.
+            </p>
+          </div>
+          <ServicesList />
+        </div>
+      </section>
+
+      {/* Doctors Section */}
       <section>
         <div className="container">
           <div className="xl:w-[470px] mx-auto">
@@ -155,7 +166,6 @@ const Home = () => {
           <DoctorList />
         </div>
       </section>
-      
     </>
   );
 };

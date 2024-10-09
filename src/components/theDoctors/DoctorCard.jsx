@@ -53,7 +53,7 @@ const DoctorCard = ({ doctor }) => {
       <div className='arrow-icon-wrapper'>
         <BsArrowRight className='arrow-icon' /> 
       </div>
-      <button onClick={handleFeedbackClick} className='feedback-btn'>Give Feedback</button>
+      <button onClick={handleFeedbackClick} className='feedback-btn'>Book Appointment</button>
     </div>
   );
 };
