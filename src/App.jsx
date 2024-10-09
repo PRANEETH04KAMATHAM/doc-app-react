@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+
+import { Routes, Route } from 'react-router-dom';
+
+// Importing Pages
+import Home from './components/home/Home';
+import Services from './components/services/Services';
+import Login from './components/login/Login';
+import Signup from './components/Signup/Signup';
+import Contact from './components/contact/Contact';
+import Doctors from './components/Doctors/Doctors';
+import DoctorDetails from "./components/Doctors/DoctorDetails";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div id="root">
+      <Header />
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+
+        {/* Doctors Page */}
+        <Route path="/doctors" element={<Doctors />} />
+        <Route path="/doctors/:id" element={<DoctorDetails />} />
+
+        {/* Authentication Pages */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
+        {/* Services and Contact Pages */}
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* Fallback Route for non-existent pages */}
+        <Route path="*" element={<div>404 - Page Not Found</div>} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
