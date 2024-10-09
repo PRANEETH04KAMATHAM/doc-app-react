@@ -6,7 +6,7 @@ import { doctors } from '../../assets/data/doctors';
 const Doctors = () => {
   return (
     <>
-      <section className="doctor-section">
+      <div className="doctor-section">
         <div className="container">
           <h2 className="heading">Find a Doctor</h2>
           <div className="search-container">
@@ -14,7 +14,7 @@ const Doctors = () => {
             <button className="search-button">Search</button>
           </div>
         </div>
-      </section>
+      </div>
 
 <section>
   <div className="container">
