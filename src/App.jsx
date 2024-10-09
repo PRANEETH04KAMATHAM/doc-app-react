@@ -12,6 +12,9 @@ import Signup from './components/Signup/Signup';
 import Contact from './components/contact/Contact';
 import Doctors from './components/Doctors/Doctors';
 import DoctorDetails from "./components/Doctors/DoctorDetails";
+import Feedback from './components/Doctors/Feedback';
+
+
 
 function App() {
   return (
@@ -33,6 +36,9 @@ function App() {
         {/* Services and Contact Pages */}
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* feedback path */}
+        <Route path='/feedback' element = {<Feedback />} />
 
         {/* Fallback Route for non-existent pages */}
         <Route path="*" element={<div>404 - Page Not Found</div>} />

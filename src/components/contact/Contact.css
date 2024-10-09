@@ -4,6 +4,7 @@ section {
     padding:2rem 0;
     color: black;
     background-color: rgb(60, 219, 214,0.5);
+    min-height: 50vh;
   }
   
   .max-w-screen-md {
