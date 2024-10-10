@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import Logout from './Logout';
-import './DoctorDashboard.css';
+import Logout from '../doctorDashboard/Logout';
+import './PatientDashboard.css';
 
-const DoctorDashboard = () => {
+const PatientDashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -12,14 +12,14 @@ const DoctorDashboard = () => {
   };
 
   return (
-    <div className="doctor-dashboard">
+    <div className="patient-dashboard">
       <header className="dashboard-header">
         <div className="hamburger" onClick={toggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
-        <h1>Doctor Dashboard</h1>
+        <h1>Patient Dashboard</h1>
         <Logout />
       </header>
       <div className="dashboard-content">
@@ -28,7 +28,7 @@ const DoctorDashboard = () => {
             <ul>
               <li>
                 <Link 
-                  to="/doctor-dashboard/profile" 
+                  to="/patient-dashboard/profile" 
                   className={location.pathname.includes('/profile') ? 'active' : ''}
                 >
                   Profile
@@ -36,12 +36,13 @@ const DoctorDashboard = () => {
               </li>
               <li>
                 <Link 
-                  to="/doctor-dashboard/appointments" 
+                  to="/patient-dashboard/appointments" 
                   className={location.pathname.includes('/appointments') ? 'active' : ''}
                 >
                   Appointments
                 </Link>
               </li>
+            
             </ul>
           </nav>
         </aside>
@@ -53,4 +54,4 @@ const DoctorDashboard = () => {
   );
 };
 
-export default DoctorDashboard;
+export default PatientDashboard;
