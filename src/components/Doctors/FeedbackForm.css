@@ -1,4 +1,4 @@
-.feedback-form {
+/* .feedback-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,7 +9,7 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    color: #1a1a1a; /* Dark color for text */
+    color: #1a1a1a; 
     margin-bottom: 16px;
   }
   
@@ -31,11 +31,11 @@
   }
   
   .text-yellowColor {
-    color: #FFD700; /* Gold color for selected stars */
+    color: #FFD700; 
   }
   
   .text-gray-400 {
-    color: #D1D5DB; /* Gray color for unselected stars */
+    color: #D1D5DB; 
   }
   
   .feedback-textarea {
@@ -44,7 +44,7 @@
   }
   
   .feedback-textarea-field {
-    border: 1px solid #0066ff34; /* Light blue border */
+    border: 1px solid #0066ff34; 
     padding: 12px;
     border-radius: 6px;
     width: 100%;
@@ -56,7 +56,7 @@
   .btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0066FF; /* Blue background */
+    background-color: #0066FF; 
     color: white;
     border: none;
     border-radius: 6px;
@@ -66,6 +66,85 @@
   }
   
   .btn:hover {
-    background-color: #0056cc; /* Darker blue on hover */
+    background-color: #0056cc; 
+  }
+   */
+
+
+
+   .feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
   }
   
+  .feedback-question {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+  }
+  
+  .rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .star-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .star-icon {
+    font-size: 32px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .text-yellowColor {
+    color: #FFD700;
+  }
+  
+  .text-gray-400 {
+    color: #D1D5DB;
+  }
+  
+  .feedback-textarea {
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .feedback-textarea-field {
+    border: 1px solid #0066ff34;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    resize: vertical;
+    outline: none;
+    font-size: 14px;
+    min-height: 100px;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+  
+  .btn:hover {
+    background-color: #0056cc;
+  }
