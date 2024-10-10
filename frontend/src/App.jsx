@@ -66,9 +66,13 @@ import Contact from './components/contact/Contact';
 import Doctors from './components/Doctors/Doctors';
 import DoctorDetails from "./components/Doctors/DoctorDetails";
 import Feedback from './components/Doctors/Feedback';
+<<<<<<< HEAD:src/App.jsx
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+=======
+//import DoctorDashboard from './components/dashboard/doctorDashboard';
+>>>>>>> 7ef1f4f8ad8c6ba973ebd5ba7b4423747a812cbe:frontend/src/App.jsx
 
   useEffect(() => {
     window.scrollTo(0, 0);
