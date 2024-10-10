@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../login/Login.css'
+import '../login/Login.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  
+  const [userType, setUserType] = useState('patient'); // Default to patient
   const navigate = useNavigate();
 
   const handleInputChange = e => {
@@ -19,8 +21,12 @@ const Login = () => {
     console.log('Login submitted', formData);
 
     // Example: Logging in without backend logic
-    // Simulate successful login
-    navigate('/home');
+    // Simulate successful login and redirect based on user type
+    if (userType === 'patient') {
+      navigate('/patient-dashboard');
+    } else {
+      navigate('/doctor-dashboard');
+    }
     alert('Login successful!');
   };
 
@@ -29,6 +35,14 @@ const Login = () => {
       <div className="auth-container">
         <form className="auth-form" onSubmit={handleSubmit}>
           <h2 className="auth-heading">Login</h2>
+
+          <div className="form-group">
+            <label>User Type</label>
+            <select value={userType} onChange={(e) => setUserType(e.target.value)}>
+              <option value="patient">Patient</option>
+              <option value="doctor">Doctor</option>
+            </select>
+          </div>
 
           <div className="form-group">
             <label>Email</label>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import Logout from '../doctorDashboard/Logout';
+import Logout from './PatientLogout';
 import './PatientDashboard.css';
 
 const PatientDashboard = () => {
@@ -42,7 +42,6 @@ const PatientDashboard = () => {
                   Appointments
                 </Link>
               </li>
-            
             </ul>
           </nav>
         </aside>

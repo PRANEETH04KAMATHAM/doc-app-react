@@ -1,37 +1,42 @@
 import doctorImg01 from "../images/doctorImg01.jpg";
 import doctorImg02 from "../images/doctorImg02.jpg";
 import doctorImg03 from "../images/doctorImg03.jpg";
+import doc1 from "../images/doc1.png";
+import doc2 from "../images/doc2.png";
+import doc3 from "../images/doc3.png";
+import doc4 from "../images/doc4.png";
+import doc5 from "../images/doc5.png";
 
 export const doctors = [
   {
     id: "01",
-    name: "Dr. Alfaz Ahmed",
+    name: "Dr. Alizeh Noor",
     specialty: "Surgeon",
     avgRating: 4.8,
     totalRating: 272,
     photo: doctorImg01,
     totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    hospital: "Bright Futures Medical Center, Dhaka",
   },
   {
     id: "02",
-    name: "Dr. Saleh Mahmud",
+    name: "Dr. Ayan Sangar",
     specialty: "Neurologist",
     avgRating: 4.8,
     totalRating: 272,
     photo: doctorImg02,
     totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    hospital: "Harbor View Hospital, Chittagong",
   },
   {
     id: "03",
-    name: "Dr. Farid Uddin",
+    name: "Dr. Suraj Mehta",
     specialty: "Dermatologist",
     avgRating: 4.8,
     totalRating: 272,
     photo: doctorImg03,
     totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    hospital: "Golden Gate Health System, Sylhet",
   },
   {
     id: "04",
@@ -39,29 +44,29 @@ export const doctors = [
     specialty: "Cardiologist",
     avgRating: 4.9,
     totalRating: 305,
-    photo: doctorImg01,
+    photo: doc2,
     totalPatients: 1800,
-    hospital: "City Heart Institute, Dhaka.",
+    hospital: "Starlight Medical Institute, London",
   },
   {
     id: "05",
-    name: "Dr. Michael Chen",
+    name: "Dr. Ana Chen",
     specialty: "Pediatrician",
     avgRating: 4.7,
     totalRating: 188,
-    photo: doctorImg02,
+    photo: doc3,
     totalPatients: 1200,
-    hospital: "Children's Medical Center, Chittagong.",
+    hospital: "Sunrise Pediatric Clinic, Dhaka",
   },
   {
     id: "06",
-    name: "Dr. Emily Patel",
+    name: "Dr. Emily Harsh",
     specialty: "Gynecologist",
     avgRating: 4.9,
     totalRating: 221,
-    photo: doctorImg03,
+    photo: doc4,
     totalPatients: 1600,
-    hospital: "Women's Health Clinic, Rajshahi.",
+    hospital: "Evergreen Women’s Health Center, Maharashtra",
   },
   {
     id: "07",
@@ -69,9 +74,9 @@ export const doctors = [
     specialty: "Orthopedic Surgeon",
     avgRating: 4.8,
     totalRating: 192,
-    photo: doctorImg01,
+    photo: doc5,
     totalPatients: 1400,
-    hospital: "Joint & Spine Center, Khulna.",
+    hospital: "Unity Medical Hospital, Sydney",
   },
   {
     id: "08",
@@ -79,8 +84,8 @@ export const doctors = [
     specialty: "Psychiatrist",
     avgRating: 4.6,
     totalRating: 158,
-    photo: doctorImg02,
+    photo: doc1,
     totalPatients: 950,
-    hospital: "Mental Wellness Clinic, Barisal.",
-  }
+    hospital: "New Hope Health Care, Los Angeles",
+  },
 ];

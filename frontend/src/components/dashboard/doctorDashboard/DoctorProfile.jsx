@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './DoctorProfile.css'; // Ensure this is linked
 
@@ -42,3 +43,4 @@ const DoctorProfile = () => {
 };
 
 export default DoctorProfile;
+

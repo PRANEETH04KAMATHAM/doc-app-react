@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/header/Header';
@@ -11,7 +10,7 @@ import Login from './components/login/Login';
 import Signup from './components/Signup/Signup';
 import Contact from './components/contact/Contact';
 import Doctors from './components/Doctors/Doctors';
-import DoctorDetails from "./components/Doctors/DoctorDetails";
+import DoctorDetails from './components/Doctors/DoctorDetails';
 import Feedback from './components/Doctors/Feedback';
 
 // Import Doctor Dashboard components
@@ -21,7 +20,7 @@ import DoctorAppointments from './components/dashboard/doctorDashboard/DoctorApp
 
 import PatientDashboard from './components/dashboard/patientDashboard/PatientDashboard.jsx';
 import PatientProfile from './components/dashboard/patientDashboard/PatientProfile.jsx';
-import PatientAppointments from './components/dashboard/patientDashboard/PatientAppoinments.jsx';
+import PatientAppointments from './components/dashboard/patientDashboard/PatientAppoinments.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation();

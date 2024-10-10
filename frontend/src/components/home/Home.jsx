@@ -82,6 +82,7 @@ const Home = () => {
 
       {/* Medical Services Section */}
       <section>
+        <div className='a'>
         <div className="container">
           <div className="text-center My_Services">
             <h2 className="heading">Providing the best medical services</h2>
@@ -136,6 +137,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -143,6 +145,7 @@ const Home = () => {
 
       {/* Medical Services List */}
       <section className="MyCon">
+        <div className='b'>
         <div className="container">
           <div className="xl:w-[470px] mx-auto My_Services">
             <h2 className="text-center heading">OUR MEDICAL SERVICES</h2>
@@ -151,6 +154,7 @@ const Home = () => {
             </p>
           </div>
           <ServicesList />
+        </div>
         </div>
       </section>
 

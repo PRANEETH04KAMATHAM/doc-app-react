@@ -241,3 +241,21 @@
     gap: 50px;
   }
 }
+/* Add this CSS for the services section background */
+.a {
+  background-color: aliceblue; /* A soft medical-themed background color */
+  padding: 50px 0; /* Adjust padding to add space around the section */
+}
+
+.a .container {
+  padding: 0 20px; /* Adjust padding inside the container if needed */
+}
+
+.b {
+  background-color: #bcdddd; /* A soft medical-themed background color */
+  padding: 50px 0; /* Adjust padding to add space around the section */
+}
+
+.b .container {
+  padding: 0 20px; /* Adjust padding inside the container if needed */
+}
