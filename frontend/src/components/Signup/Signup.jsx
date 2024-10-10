@@ -24,10 +24,23 @@ const Signup = () => {
     if (password !== confirmPassword) {
       return alert('Passwords do not match');
     }
+    
+    // Here you would typically send the form data including the image to your backend
+    // For now, we'll just log the form data
+    console.log({
+      role, name, email, password, contactNumber, age, gender, 
+      address, specialization, hospitalName, image
+    });
 
     // Example: Handle form data without backend logic
     alert('Registration successful!');
     navigate('/login');
+  };
+
+  const handleImageChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
   };
 
   return (
@@ -77,6 +90,17 @@ const Signup = () => {
               <option value="other">Other</option>
             </select>
           </div>
+
+          <div className="form-group">
+            <label>Profile Picture</label>
+            <input 
+              type="file" 
+              accept="image/*"
+              onChange={handleImageChange}
+              required
+            />
+          </div>
+
           {role === 'doctor' && (
             <>
               <div className="form-group">
